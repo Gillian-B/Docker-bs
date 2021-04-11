@@ -1,0 +1,15 @@
+version: '3'
+services:
+    hello-world:
+        image: popeyebtstp
+        ports: 
+            - "8080:3000"
+        restart: always
+
+    db:
+        image: postgres:9.4
+        ports:
+            - "5432:5432"
+        environment:
+            POSTGRES_PASSWORD: popeye
+        restart: always
